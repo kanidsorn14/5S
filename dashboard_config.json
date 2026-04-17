@@ -1,0 +1,155 @@
+{
+    "column_widths": {
+        "no": 10,
+        "area": 73,
+        "score": 17
+    },
+    "font_sizes": {
+        "title": 70,
+        "month": 46,
+        "table_head": 28,
+        "table_body": 37,
+        "col_no": 35,
+        "col_area": 36,
+        "col_score": 33
+    },
+    "summary_score": {
+        "text": "Rangsit Score",
+        "font_size": 35,
+        "score_font_size": 70,
+        "color": "#ffffff",
+        "top": 8,
+        "right": 0,
+        "bg_color": "#0052cc",
+        "border_color": "#ffffff",
+        "border_width": 1,
+        "border_radius": 12
+    },
+    "colors": {
+        "title_color": "#0052cc",
+        "month_color": "#854305",
+        "summary_header_bg": "#002d70",
+        "scoring_mode": "standard",
+        "default_score_color": "#3e3e47",
+        "conditions": [
+            {
+                "operator": "<",
+                "threshold": 49,
+                "threshold2": null,
+                "color": "#ff0000",
+                "bg_color": "#000000",
+                "use_custom_no": true,
+                "color_no": "#ff0000",
+                "bg_no": "#000000",
+                "color_area": "#ffffff",
+                "bg_area": "#000000",
+                "use_custom_score": true,
+                "color_score": "#000000",
+                "bg_score": "#000000",
+                "use_custom_area": false
+            },
+            {
+                "operator": ">=",
+                "threshold": 90,
+                "threshold2": null,
+                "color": "#0429e7",
+                "bg_color": "#000000",
+                "color_no": "#0052cc",
+                "bg_no": "#000000",
+                "color_area": "#ffffff",
+                "bg_area": "#000000",
+                "use_custom_score": true,
+                "color_score": "#000000",
+                "bg_score": "#000000",
+                "use_custom_no": false,
+                "use_custom_area": false
+            },
+            {
+                "operator": "between",
+                "threshold": 50,
+                "threshold2": 90,
+                "color": "#008000",
+                "bg_color": "#000000",
+                "color_no": "#ffffff",
+                "bg_no": "#000000",
+                "color_area": "#ffffff",
+                "bg_area": "#000000",
+                "use_custom_score": true,
+                "color_score": "#000000",
+                "bg_score": "#000000",
+                "use_custom_no": false,
+                "use_custom_area": false
+            }
+        ]
+    },
+    "custom_css": "",
+    "schedule": {
+        "work_days": [
+            2,
+            3,
+            4,
+            5,
+            6
+        ],
+        "holidays": [
+            {
+                "date": "2026-04-13",
+                "name": "Songkran"
+            },
+            {
+                "date": "2026-04-14",
+                "name": "Songkran"
+            },
+            {
+                "date": "2026-04-15",
+                "name": "Songkran"
+            },
+            {
+                "date": "2026-04-16",
+                "name": "Songkran"
+            },
+            {
+                "date": "2026-05-01",
+                "name": "Labor's"
+            },
+            {
+                "date": "2026-06-03",
+                "name": "Chat-mongkol"
+            },
+            {
+                "date": "2026-07-28",
+                "name": "Wisakha-Bucha"
+            },
+            {
+                "date": "2026-08-12",
+                "name": "Mother's"
+            },
+            {
+                "date": "2026-10-23",
+                "name": "Piya-maharaj"
+            },
+            {
+                "date": "2026-12-05",
+                "name": "Father's"
+            },
+            {
+                "date": "2026-12-28",
+                "name": "Buddhist Lent (เข้าพรรษา)"
+            },
+            {
+                "date": "2026-12-29",
+                "name": "New Year's Eve#1"
+            },
+            {
+                "date": "2026-12-30",
+                "name": "Constitution (วันรัฐธรรมนูญ)"
+            },
+            {
+                "date": "2026-12-31",
+                "name": "New Year's Eve#2"
+            }
+        ],
+        "extra_work_days": []
+    },
+    "updatetime": "2026-04-10 14:57:29"
+}

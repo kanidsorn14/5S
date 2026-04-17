@@ -1,0 +1,114 @@
+{
+    "BIAS": {
+        "factory": "3",
+        "office": "2"
+    },
+    "DACC": {
+        "factory": "",
+        "office": "3"
+    },
+    "ENGINEERING": {
+        "factory": "11",
+        "office": "6"
+    },
+    "ENVIRONMENTAL & SAFETY": {
+        "factory": "2",
+        "office": "6"
+    },
+    "EXCELLENCE ": {
+        "factory": "",
+        "office": "1"
+    },
+    "EXTRUDER": {
+        "factory": "7",
+        "office": "1"
+    },
+    "F\/G STORE & DELIVERY": {
+        "factory": "7",
+        "office": "3"
+    },
+    "FINANCE": {
+        "factory": "",
+        "office": "16"
+    },
+    "FORMING": {
+        "factory": "",
+        "office": "2"
+    },
+    "GW & TOPPING": {
+        "factory": "4",
+        "office": "1"
+    },
+    "HR & GA": {
+        "factory": "",
+        "office": "19"
+    },
+    "IR & EA & LEGAL": {
+        "factory": "",
+        "office": "4"
+    },
+    "ISO": {
+        "factory": "",
+        "office": "2"
+    },
+    "IT": {
+        "factory": "",
+        "office": "5"
+    },
+    "MARKETING & SALES": {
+        "factory": "",
+        "office": "9"
+    },
+    "MIXING": {
+        "factory": "4",
+        "office": "2"
+    },
+    "NEW MODEL": {
+        "factory": "",
+        "office": "8"
+    },
+    "PLANNING\/SAP": {
+        "factory": "",
+        "office": "7"
+    },
+    "Process Improvement": {
+        "factory": "2",
+        "office": "4"
+    },
+    "PRODUCTION ENGINEERING": {
+        "factory": "4",
+        "office": "7"
+    },
+    "PURCHASE": {
+        "factory": "",
+        "office": "4"
+    },
+    "QA": {
+        "factory": "5",
+        "office": "4"
+    },
+    "QC TIRE": {
+        "factory": "7",
+        "office": "2"
+    },
+    "QC TUBE": {
+        "factory": "7",
+        "office": "2"
+    },
+    "R\/M & CPD & TEST": {
+        "factory": "",
+        "office": "5"
+    },
+    "TIRE CURING": {
+        "factory": "19",
+        "office": "3"
+    },
+    "TUBE COMPONENT": {
+        "factory": "8",
+        "office": "2"
+    },
+    "TUBE CURING": {
+        "factory": "4",
+        "office": "1"
+    }
+}
