@@ -16,6 +16,17 @@ if (file_exists($config_file)) {
     $dashboard_config = json_decode(file_get_contents($config_file), true) ?: [];
 }
 $summary_header_bg = $dashboard_config['colors']['summary_header_bg'] ?? '#0052cc';
+
+// Thermometer Logic
+function getBulbStyle($scoreValue) {
+    if ($scoreValue >= 80) return ['light' => '#94d98a', 'dark' => '#3d8c2e']; 
+    if ($scoreValue >= 70) return ['light' => '#c2e59d', 'dark' => '#689f38']; 
+    if ($scoreValue >= 60) return ['light' => '#fff38c', 'dark' => '#fbc02d']; 
+    if ($scoreValue >= 50) return ['light' => '#ffcc80', 'dark' => '#ef6c00']; 
+    return ['light' => '#ff9a9a', 'dark' => '#d32f2f']; 
+}
+$bulb_colors = getBulbStyle($average_score);
+$score_pct = min(100, max(0, $average_score));
 ?>
 <!doctype html>
 <html lang="th">
@@ -88,24 +99,27 @@ $summary_header_bg = $dashboard_config['colors']['summary_header_bg'] ?? '#0052c
             left: 50%;
             transform: translateX(-50%);
             width: 34px;
-            height: calc(100% - 20px);
+            height: calc(<?php echo $score_pct; ?>% - 20px);
+            min-height: 34px;
             background: linear-gradient(to top, #cf1615 10%, #dc1c1c 20%, #ef7328 40%, #ffdf2a 60%, #9bc26b 80%, #158b4b 100%);
             border-radius: 17px;
             box-shadow: inset -2px 0px 4px rgba(0,0,0,0.2);
+            transition: height 1s ease-out;
         }
 
         .thermometer-bulb {
             position: absolute;
-            bottom: -35px;
+            bottom: calc(<?php echo $score_pct; ?>% - 70px);
             left: 50%;
             transform: translateX(-50%);
             width: 120px;
             height: 120px;
-            background: radial-gradient(circle at 35% 35%, #ff5252 0%, #b71c1c 80%);
+            background: radial-gradient(circle at 35% 35%, <?php echo $bulb_colors['light']; ?> 0%, <?php echo $bulb_colors['dark']; ?> 80%);
             border-radius: 50%;
             border: 6px solid #fff;
             box-shadow: inset -4px -4px 10px rgba(0,0,0,0.5), 0 5px 15px rgba(0,0,0,0.2);
             z-index: 2;
+            transition: bottom 1s ease-out, background 0.5s ease;
         }
 
         /* Criteria Boxes */
