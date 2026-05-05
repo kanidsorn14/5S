@@ -1,5 +1,4 @@
 <?php
-header("location:http://i-smartweb-rs.ircthailand.co.th:88/5s/summary_overall");
 session_start();
 include "../sqlconnect.php";
 date_default_timezone_set('Asia/Bangkok');
@@ -26,7 +25,17 @@ function getBulbStyle($scoreValue) {
     return ['light' => '#ff9a9a', 'dark' => '#d32f2f']; 
 }
 $bulb_colors = getBulbStyle($average_score);
-$score_pct = min(100, max(0, $average_score));
+$score_val = min(100, max(0, $average_score));
+
+// Map actual score (0-100) to visual position (0-100%) to align with equal-height criteria boxes
+function mapScoreToPosition($score) {
+    if ($score >= 80) return 80 + (($score - 80) / 20) * 20;
+    if ($score >= 70) return 60 + (($score - 70) / 10) * 20;
+    if ($score >= 60) return 40 + (($score - 60) / 10) * 20;
+    if ($score >= 50) return 20 + (($score - 50) / 10) * 20;
+    return ($score / 50) * 20;
+}
+$visual_pos = mapScoreToPosition($score_val);
 ?>
 <!doctype html>
 <html lang="th">
@@ -99,7 +108,7 @@ $score_pct = min(100, max(0, $average_score));
             left: 50%;
             transform: translateX(-50%);
             width: 34px;
-            height: calc(<?php echo $score_pct; ?>% - 20px);
+            height: calc(<?php echo $visual_pos; ?>% - 20px);
             min-height: 34px;
             background: linear-gradient(to top, #cf1615 10%, #dc1c1c 20%, #ef7328 40%, #ffdf2a 60%, #9bc26b 80%, #158b4b 100%);
             border-radius: 17px;
@@ -109,7 +118,7 @@ $score_pct = min(100, max(0, $average_score));
 
         .thermometer-bulb {
             position: absolute;
-            bottom: calc(<?php echo $score_pct; ?>% - 70px);
+            bottom: calc(<?php echo $visual_pos; ?>% - 70px);
             left: 50%;
             transform: translateX(-50%);
             width: 120px;

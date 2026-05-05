@@ -1,5 +1,4 @@
 	<?php
-	header("location:http://i-smartweb-rs.ircthailand.co.th:88/5s");
 	include "sqlconnect.php";
 	date_default_timezone_set('Asia/Bangkok');
 	$month = date('F Y');
