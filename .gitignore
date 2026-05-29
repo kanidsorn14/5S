@@ -16,3 +16,6 @@ vendor/
 # Others
 .bak
 *.swp
+
+# Project knowledge (local only)
+KNOWLEDGE.md
